@@ -64,7 +64,7 @@ class _PhoneVerificationPageState extends State<PhoneVerificationPage> {
                         prefix: const Padding(
                           padding: EdgeInsets.symmetric(horizontal: 8),
                           child: Text(
-                            '+91 ',
+                            '+237 ',
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
@@ -86,9 +86,9 @@ class _PhoneVerificationPageState extends State<PhoneVerificationPage> {
                       child: ElevatedButton(
                         onPressed: () {
                           if (_phoneAuthController.text.isNotEmpty &&
-                              _phoneAuthController.text.length == 10) {
+                              _phoneAuthController.text.length == 9) {
                             _uberAuthController.verifyPhoneNumber(
-                                "+91" + _phoneAuthController.text);
+                                "+237" + _phoneAuthController.text);
                           }
                         },
                         style: ButtonStyle(

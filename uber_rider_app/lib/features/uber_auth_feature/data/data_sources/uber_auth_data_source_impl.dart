@@ -66,9 +66,15 @@ class UberAuthDataSourceImpl extends UberAuthDataSource {
 
   @override
   Future<bool> uberAuthCheckUserStatus(String docId) async {
-    final riderCollection = firestore.collection("riders");
-    var doc = await riderCollection.doc(docId).get();
-    return doc.exists;
+    try {
+      final riderCollection = firestore.collection("riders");
+      print(riderCollection);
+      var doc = await riderCollection.doc(docId).get();
+      return doc.exists;
+    } catch (e) {
+      print("this is the error: $e");
+    }
+    return false;
   }
 
   @override
